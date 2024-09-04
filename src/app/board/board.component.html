@@ -1,0 +1,9 @@
+<div class="board">
+    <div *ngFor="let cell of board; let i = index" class="cell" (click)="makeMove(i)">
+      {{ cell }}
+    </div>
+  </div>
+  <div class="status">
+    <p *ngIf="winner">{{ winner }} wins!</p>
+    <button (click)="resetGame()">Reset Game</button>
+  </div>
